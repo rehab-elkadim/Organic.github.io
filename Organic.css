@@ -1,0 +1,165 @@
+html{
+  font-size: 18px;
+  background-color: mintcream;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.header {
+  background-color: #272932;
+}
+.header ul{
+    list-style-type: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.6rem;
+    margin-top: 0;
+}
+li{
+    display: inline;
+}
+
+
+h1, li{
+    font-family: "Libre Franklin";
+}
+.container{
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 2rem;
+}
+.ratings{
+    background-color: #362FD9;
+    color: white;
+    font-size: 1.5rem;
+    padding: 4% 12%;
+    width: 60%;
+    justify-self: center;
+}
+.products{
+  height: auto;
+}
+.milks{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-direction: row;
+}
+.milks-product{
+  text-align: center;
+  font-family: "Libre Franklin"; 
+  padding: 40px;
+  background-color: #272932;
+  margin: 0.5rem;
+}
+.milks-product img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 25%;
+    max-height: 300px;
+}
+.herbs{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-direction: row;
+}
+.herbs-product{
+    text-align: center;
+    font-family: "Libre Franklin"; 
+    padding: 40px;
+    background-color: #272932;
+    margin:0.5rem;
+}
+.herbs-product img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 25%;
+    max-height: 300px;
+}
+
+.about{
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: center;
+    width: 70%;
+    justify-self: center;
+  }
+.foot{
+    background-color: #272932;
+    color: white;
+    padding: 40px;
+    font-size: 2rem;
+}
+.foot ul{
+    list-style-type: none;
+    
+}
+/*less than 650px image block
+650:950 one image + text 
+more than 900 two images+text
+min- at least
+max- at most*/
+.one{
+    display: grid;
+    column-gap: 0.2rem;
+    justify-items: center;
+    font-size: 1.5rem;
+    font-family: "Libre Franklin";
+}
+.one .img1{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+.one .img2{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+@media only screen and (min-width: 950px) {
+    .one{
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;;
+    }
+    .one .img1{
+        background-image: url(s.jpg);
+    }
+    .one .img2{
+        background-image: url(milks.jpg);
+    }
+    
+}
+@media only screen and (min-width: 700px) and (max-width:950px){
+    .one{
+        grid-template-columns: 1fr 4fr;
+    }
+    .one .img1{
+        display: none;
+    }
+    .one .img2{
+        background-image: url(milks.jpg);
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .one{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 4fr;
+    }
+    .one .img1{
+        display: none;
+    }
+    .one .img2{
+        background-image: url(milks.jpg);
+    }
+    
+}
